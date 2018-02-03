@@ -11,10 +11,11 @@ public class ThreadJoin {
         TestJoin t2 = new TestJoin("t2");
         TestJoin t3 = new TestJoin("t3");
         t1.start();
-        try{
-            t1.join();
-        }catch(Exception e){System.out.println(e);}
         t2.start();
+        try{
+            t2.join();
+        }catch(Exception e){System.out.println(e);}
+
         //thread 3 won't start until thread 2 is complete
         t3.start();
     }
